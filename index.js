@@ -16,3 +16,10 @@ client.on('message', message => {
     message.channel.send('Pong 🏓'); 
   }
 });
+
+let commandFile = require(`./commands/${command}.js`);
+
+commandFile.run(client, message, args);
+
+
+}
